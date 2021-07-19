@@ -15,9 +15,16 @@ export default squares => {
     if (squares[a] &&
       squares[a] === squares[b] &&
       squares[a] === squares[c]) {
-      return squares[a];
+      return {
+        winner: squares[a],
+        winCells: lines[i]
+      };
     }
   }
+
+  if (!squares.includes(null)) return {
+    winner: 'draw'
+  };
 
   return null;
 };

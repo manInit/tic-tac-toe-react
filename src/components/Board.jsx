@@ -4,8 +4,10 @@ import Square from "./Square";
 class Board extends Component {
   renderSquare(i) {
     return <Square
+            key={i}
             value={this.props.squares[i]}
             onClick={() => this.props.onClick(i)}
+            isWinner={this.props.winnerCells.includes(i)}
           />;
   }
 
@@ -19,7 +21,7 @@ class Board extends Component {
       for (let j = 0; j < rowCount; j++) {
         row.push(this.renderSquare(number++));
       }
-      boardsRow.push(<div className="board-row">{ row }</div>);
+      boardsRow.push(<div className="board-row" key={i}>{ row }</div>);
     }
 
     return (
