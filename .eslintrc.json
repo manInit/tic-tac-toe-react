@@ -11,12 +11,15 @@
       "warn", { 
       "vars": "all" 
       }
-    ]
+    ],
+    "react/prop-types": 0,
+    "react/react-in-jsx-scope": "off"
   },
   "parserOptions": {
     "sourceType": "module"
   },
   "extends": [
-    "eslint:recommended"
+    "eslint:recommended",
+    "plugin:react/recommended"
   ]
 }
