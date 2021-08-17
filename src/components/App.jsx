@@ -7,7 +7,10 @@ class App extends Component {
     super(props);
     this.state = {
       history: [
-        { squares: Array(9).fill(null), numberCell: -1 }
+        {
+          squares: Array(9).fill(null),
+          numberCell: -1
+        }
       ],
       isAsc: true,
       stepNumber: 0,
