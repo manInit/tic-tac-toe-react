@@ -60,7 +60,7 @@ class App extends Component {
         <li key={moveNumber}>
           <button
             onClick={() => this.jumpTo(moveNumber)}
-            style={moveNumber === this.state.stepNumber ? {background: 'green'} : {}}
+            style={moveNumber === this.state.stepNumber ? {background: 'yellow'} : {}}
           >
             { desc }
             {
